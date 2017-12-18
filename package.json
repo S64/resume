@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/html-pdf": "^2.1.2",
     "html-pdf": "^2.2.0",
+    "pug-cli": "^1.0.0-alpha6",
     "ts-node": "^4.0.2",
     "typescript": "^2.6.2"
   },
