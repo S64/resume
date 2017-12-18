@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/html-pdf": "^2.1.2",
     "html-pdf": "^2.2.0",
+    "live-server": "^1.2.0",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
@@ -24,7 +25,8 @@
     "build": "npm run build:html && npm run build:css && npm run build:pdf",
     "build:pdf": "ts-node scripts/pdf.ts",
     "build:html": "pug 'src/index.pug' --out 'dist/'",
-    "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'"
+    "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'",
+    "server": "live-server 'dist/'"
   },
   "dependencies": {
     "paper-css": "^0.3.0",
