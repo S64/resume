@@ -29,7 +29,6 @@
     "server": "live-server 'dist/'"
   },
   "dependencies": {
-    "paper-css": "^0.3.0",
     "sanitize.css": "^5.0.0"
   }
 }
