@@ -20,6 +20,7 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "pug": "^2.0.0-rc.4",
+    "sanitize.css": "^5.0.0",
     "ts-node": "^4.0.2",
     "typescript": "^2.6.2"
   },
@@ -29,8 +30,5 @@
     "build:html": "ts-node scripts/html.ts",
     "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'",
     "server": "live-server 'dist/'"
-  },
-  "dependencies": {
-    "sanitize.css": "^5.0.0"
   }
 }
