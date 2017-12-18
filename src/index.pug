@@ -5,6 +5,46 @@ include _includes/_mixins.pug
   const age = birthday.until(LocalDate.now(), ChronoUnit.YEARS);
 
 -
+  const osses = [
+    {
+      url: 'https://github.com/S64/android-animated-toolbar',
+      stars: 33
+    },
+    {
+      url: 'https://github.com/S64/android-outside-activity',
+      stars: 16
+    },
+    {
+      url: 'https://github.com/S64/android-inset-views',
+      stars: 0
+    },
+    {
+      url: 'https://github.com/S64/android-nested-scrolling-views',
+      stars: 6
+    },
+    {
+      url: 'https://github.com/S64/android-radiobutton-extended',
+      stars: 4
+    },
+    {
+      url: 'https://github.com/S64/android-navigation-bar-view',
+      stars: 32
+    },
+    {
+      url: 'https://github.com/S64/android-sticky-recycler',
+      stars: 34
+    },
+    {
+      url: 'https://github.com/S64/repoli',
+      stars: 3
+    },
+    {
+      url: 'https://github.com/S64/moshi-kotlin-ignore',
+      stars: 1
+    }
+  ];
+
+-
   const schools = {
     hai2: "昭島市立拝島第二小学校",
     haichu: "昭島市立拝島中学校",
@@ -132,12 +172,12 @@ include _includes/_mixins.pug
   ];
 
 -
-  const projects = [
+  const projects1 = [
     {
       timeAtHtml: "平成24年9月",
       name: "WordCamp 2012 運営ボランティアスタッフ",
       members: undefined,
-      contentHtml: "ブログCMS WordPress のオフィシャルイベント「WordCamp」にて、運営スタッフおよびライトニングトークへ参加。<br/>gihyo (技術評論社) の当日レポートに掲載される。",
+      contentHtml: "ブログCMS WordPress のオフィシャルイベント「WordCamp」にて、運営スタッフおよびライトニングトークへ参加。gihyo (技術評論社) の当日レポートに掲載される。",
       tools: undefined
     },
     {
@@ -151,7 +191,7 @@ include _includes/_mixins.pug
       timeAtHtml: "平成27年6月,<br/> 平成27年11月〜",
       name: "求人サイトの求職者向けAndroidアプリ開発",
       members: '2人, 1人',
-      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、主力となる求人サイトのAndroid向けアプリ開発を担当。主にグロースフェーズ, 大規模なリニューアルに参画し、施策の検討や設計など全行程を1人で担当。<br/>グロース施策に関しては、ディレクターナシで自身で企画, 実装, 数値検証などを行う。<br/>またアプリ開発に際して必要なバックエンド要検討も必要に応じ自身で開発した。",
+      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、主力となる求人サイトのAndroid向けアプリ開発を担当。主にグロースフェーズ, 大規模なリニューアルに参画し、施策の検討や設計など全行程を1人で担当。グロース施策に関しては、ディレクターナシで自身で企画, 実装, 数値検証などを行う。<br/>またアプリ開発に際して必要なバックエンド要検討も必要に応じ自身で開発した。",
       tools: ['Android', 'Java', 'Kotlin', 'Ruby on Rails', 'BigQuery', 'R']
     },
     {
@@ -165,7 +205,7 @@ include _includes/_mixins.pug
       timeAtHtml: "平成27年8月<br/> 〜 11月",
       name: "ビジネス向けチャットアプリ新規開発",
       members: '2人',
-      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、新規プロダクトしてビジネスチャットアプリのAndroid版を開発。ディレクターやマネージャ不在の中、デザイナーとコミュニケーションを取りアプリのブラッシュアップに務めた。<br/>また、設計等も自身で行うなど、開発に関わる全行程に関わる。<br/>主にチャット画面の実装を担当し、特にテキスト入力に関しては日常的な利用に関わる部分のため、Androidではあまり一般的でないUIを実現。",
+      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、新規プロダクトしてビジネスチャットアプリのAndroid版を開発。ディレクターやマネージャ不在の中、デザイナーとコミュニケーションを取りアプリのブラッシュアップに務めた。<br/>また、設計等も自身で行うなど、開発に関わる全行程に関わる。主にチャット画面の実装を担当し、特にテキスト入力に関しては日常的な利用に関わる部分のため、Androidではあまり一般的でないUIを実現。",
       tools: ['Android', 'Java']
     },
     {
@@ -188,15 +228,58 @@ include _includes/_mixins.pug
       members: '1人',
       contentHtml: '市が主催となるイベントに向け、Twitter上で公開する広報動画 (動画広告) の制作を受託。',
       tools: ['After Effects', 'Premiere Pro', 'Adobe Illustrator']
-    },
+    }
+  ];
+
+-
+  const projects2 = [
     {
       timeAtHtml: '平成29年11月<br/> 〜 12月',
-      name: 'SNS管理アプリケーション開発',
+      name: 'SNS管理アプリケーション受託開発',
       members: '1人',
       contentHtml: 'ソーシャルアカウントを管理・解析するWebアプリケーションの初期開発に参画。開発体制の内製化をしていない事業者であるため、UXを高められるモダンな設計でありながらも、基盤には十分に枯れた技術や大きなバックが存在するもの、設計が破綻しづらく生産性の高い技術選定を心掛けた。',
       tools: ['TypeScript', 'React', 'NodeJS', 'Java', 'Kotlin', 'Swagger', 'PostgreSQL', 'JAX-RS (Jersey)']
+    },
+    {
+      timeAtHtml: '平成29年7月',
+      name: 'BookStackへのコントリビュート',
+      contentHtml: '社内向けナレッジベースの導入を受託した際、BookStackというOSSの日本語訳をした。',
+      tools: ['PHP', 'Laravel']
+    },
+    {
+      timeAtHtml: '平成29年11月',
+      name: 'Swaggerへのコントリビュート',
+      contentHtml: '仕事でSwaggerを使うにあたり、swagger本体のswagger-codegenというOSSへコントリビュートした。',
+      tools: ['NodeJS', 'TypeScript']
+    },
+    {
+      timeAtHtml: '平成29年8月',
+      name: '各種OSS開発',
+      contentHtml: 'Android向けライブラリを中心に、開発したコンポーネントをOSSとして継続的に公開している。現在、' + osses.map((oss) => oss.stars).reduce((sum, stars) => sum+stars) + 'を越えるStarを獲得。',
+      tools: ['Android', 'Java', 'Kotlin', 'TypeScript']
     }
   ];
+
+mixin projects_table(projects)
+  +table()
+    tbody
+      each project in projects
+        tr
+          td(rowspan='2')!= project.timeAtHtml
+          td= project.name
+          td
+            if project.members
+              span= '体制: '
+              span= project.members
+        tr
+          td(colspan="2")
+            div!= project.contentHtml
+            if project.tools
+              div.using-tools
+                span= '使用技術: '
+                span
+                  each tool in project.tools
+                    span.tool= tool
 
 doctype html
 html
@@ -262,29 +345,14 @@ html
                         span.notes= career.notes
         div.point= '※ "長期契約" として、契約期間が半年以上のもののみを記載'
 
-      section#projects
+      section#projects1
         +primary_header() 参画プロジェクト (一例)
-        +table()
-          tbody
-            each project in projects
-              tr
-                td(rowspan='2')!= project.timeAtHtml
-                td= project.name
-                td
-                  if project.members
-                    span= '体制: '
-                    span= project.members
-              tr
-                td(colspan="2")
-                  div!= project.contentHtml
-                  if project.tools
-                    div.using-tools
-                      span= '使用技術: '
-                      span
-                        each tool in project.tools
-                          span.tool= tool
+        +projects_table(projects1)
 
-        footer#footer
-          div
-            span= 'For details: '
-            span= 'github.com/S64/resume'
+      section#projects2
+        +projects_table(projects2)
+
+      footer#footer
+        div
+          span= 'For details: '
+          span= 'github.com/S64/resume'

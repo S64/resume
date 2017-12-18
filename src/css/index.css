@@ -18,7 +18,7 @@
 :root {
   font-family: 'Noto Sans Japanese', sans-serif;
 
-  font-size: 2.3mm;
+  font-size: 2.5mm;
   line-height: 1.25em;
 
   --text-align-start: {
@@ -53,16 +53,23 @@ h1 {
 
 #personal-info,
 #careers,
-#projects {
+#projects1,
+#projects2 {
   & {
     margin: 10mm 0;
-    page-break-inside: avoid;
   }
 
   & tr th,
   & tr td {
     padding: 1.5mm 2mm;
   }
+}
+
+#personal-info,
+#careers,
+#projects1,
+#projects2 {
+  page-break-inside: avoid;
 }
 
 #imprint {
@@ -134,7 +141,8 @@ table#personal-info {
   }
 }
 
-#projects table {
+#projects1 table,
+#projects2 table {
   & tr {
     & > *:nth-child(1)[rowspan="2"] {
       width: 25mm;
@@ -146,6 +154,10 @@ table#personal-info {
       margin-right: 1em;
     }
   }
+}
+
+#projects2 {
+  margin-bottom: 0;
 }
 
 #footer {
