@@ -12,19 +12,21 @@
   "homepage": "https://github.com/S64/resume#readme",
   "devDependencies": {
     "@types/html-pdf": "^2.1.2",
+    "@types/pug": "^2.0.4",
     "html-pdf": "^2.2.0",
+    "js-joda": "^1.6.2",
     "live-server": "^1.2.0",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
-    "pug-cli": "^1.0.0-alpha6",
+    "pug": "^2.0.0-rc.4",
     "ts-node": "^4.0.2",
     "typescript": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build:html && npm run build:css && npm run build:pdf",
     "build:pdf": "ts-node scripts/pdf.ts",
-    "build:html": "pug 'src/index.pug' --out 'dist/'",
+    "build:html": "ts-node scripts/html.ts",
     "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'",
     "server": "live-server 'dist/'"
   },

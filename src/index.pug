@@ -1,6 +1,10 @@
 include _includes/_mixins.pug
 
 -
+  const birthday = LocalDate.parse('1997-06-04');
+  const age = birthday.until(LocalDate.now(), ChronoUnit.YEARS);
+
+-
   const schools = {
     hai2: "昭島市立拝島第二小学校",
     haichu: "昭島市立拝島中学校",
@@ -220,7 +224,9 @@ html
               // Imprint
           tr
             th 生年月日
-            td(colspan="2") 平成9年6月4日 (満20歳)
+            td(colspan="2")
+              span= DateTimeFormatter.ofPattern('yyyy年M月d日').format(birthday)
+              span= ' (満'+age+'歳)'
           tr
             th 現住所
             td(colspan="3")
