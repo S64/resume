@@ -1,7 +1,274 @@
+include _includes/_mixins.pug
+
+-
+  const schools = {
+    hai2: "昭島市立拝島第二小学校",
+    haichu: "昭島市立拝島中学校",
+    seisa: "学校法人国際学園 星槎国際高等学校"
+  };
+
+-
+  const works = {
+    wantedly: "ウォンテッドリー株式会社",
+    lig: "株式会社LIG",
+    freelance: "個人事業主",
+    seisa: "学校法人国際学園 星槎国際高等学校 八王子学習センター"
+  };
+
+-
+  const career_types = {
+    entered: "入学",
+    graduated: "卒業",
+    work_entered: "入社",
+    work_retired: "退職",
+    work_opened: "開業",
+    work_agreed: "長期契約"
+  };
+
+-
+  const careers = [
+    {
+      name: schools.hai2,
+      timeAt: "平成16年4月",
+      type: career_types.entered,
+      location: '東京都昭島市',
+      notes: undefined
+    },
+    {
+      name: schools.hai2,
+      timeAt: "平成22年3月",
+      type: career_types.graduated,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: schools.haichu,
+      timeAt: "平成22年4月",
+      type: career_types.entered,
+      location: '東京都昭島市',
+      notes: undefined
+    },
+    {
+      name: schools.haichu,
+      timeAt: "平成25年3月",
+      type: career_types.graduated,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: schools.seisa,
+      timeAt: "平成25年4月",
+      type: career_types.entered,
+      location: '北海道芦別市 (東京都八王子市)',
+      notes: '通信制 普通科 (通学型)'
+    },
+    {
+      name: works.wantedly,
+      timeAt: "平成27年6月",
+      type: career_types.work_entered,
+      location: '東京港区',
+      notes: 'インターン (Androidアプリエンジニア)'
+    },
+    {
+      name: works.lig,
+      timeAt: "平成27年8月",
+      type: career_types.work_entered,
+      location: '東京都台東区',
+      notes: 'アルバイト (PHPバックエンドエンジニア)'
+    },
+    {
+      name: works.lig,
+      timeAt: "平成27年10月",
+      type: career_types.work_retired,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: schools.seisa,
+      timeAt: "平成28年3月",
+      type: career_types.graduated,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: works.wantedly,
+      timeAt: "平成28年4月",
+      type: career_types.work_entered,
+      location: '東京都港区',
+      notes: '正社員 (Androidアプリエンジニア, Ruby on Railsウェブエンジニア)'
+    },
+    {
+      name: works.wantedly,
+      timeAt: "平成29年2月",
+      type: career_types.work_retired,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: works.freelance,
+      timeAt: "平成29年3月 (現職)",
+      type: career_types.work_opened,
+      location: undefined,
+      notes: undefined
+    },
+    {
+      name: works.wantedly,
+      timeAt: "平成29年3月 (現職)",
+      type: career_types.work_agreed,
+      location: '東京都港区',
+      notes: '業務委託 (Androidアプリエンジニア)'
+    },
+    {
+      name: works.seisa,
+      timeAt: "平成29年4月 (現職)",
+      type: career_types.work_agreed,
+      location: '東京都八王子市',
+      notes: '時間講師 (プログラミング講師)'
+    }
+  ];
+
+-
+  const projects = [
+    {
+      timeAtHtml: "平成24年9月",
+      name: "WordCamp 2012 運営ボランティアスタッフ",
+      members: undefined,
+      contentHtml: "ブログCMS WordPress のオフィシャルイベント「WordCamp」にて、運営スタッフおよびライトニングトークへ参加。<br/>gihyo (技術評論社) の当日レポートに掲載される。",
+      tools: undefined
+    },
+    {
+      timeAtHtml: "平成25年7月",
+      name: "個人開発アプリ",
+      members: '1人',
+      contentHtml: "Google Play Store向けにXamarin.Androidを用いアプリを開発・公開。現在は公開を停止している。<br/>累計994,481回ダウンロードを達成。",
+      tools: ['Android', 'Java', 'C#', 'Xamarin.Android']
+    },
+    {
+      timeAtHtml: "平成27年6月,<br/> 平成27年11月〜",
+      name: "求人サイトの求職者向けAndroidアプリ開発",
+      members: '2人, 1人',
+      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、主力となる求人サイトのAndroid向けアプリ開発を担当。主にグロースフェーズ, 大規模なリニューアルに参画し、施策の検討や設計など全行程を1人で担当。<br/>グロース施策に関しては、ディレクターナシで自身で企画, 実装, 数値検証などを行う。<br/>またアプリ開発に際して必要なバックエンド要検討も必要に応じ自身で開発した。",
+      tools: ['Android', 'Java', 'Kotlin', 'Ruby on Rails', 'BigQuery', 'R']
+    },
+    {
+      timeAtHtml: "平成27年8月<br/> 〜 10月",
+      name: "求人サイトの基盤システム載せ替え",
+      members: '5人',
+      contentHtml: 'Web制作会社の自社サービスである求人サイトにて、従来のWordPressによる基盤からCakePHPによるバックエンドへの載せ替えに関わる。',
+      tools: ['CakePHP', 'JavaScript']
+    },
+    {
+      timeAtHtml: "平成27年8月<br/> 〜 11月",
+      name: "ビジネス向けチャットアプリ新規開発",
+      members: '2人',
+      contentHtml: "ビジネスSNSを運営するスタートアップ企業にて、新規プロダクトしてビジネスチャットアプリのAndroid版を開発。ディレクターやマネージャ不在の中、デザイナーとコミュニケーションを取りアプリのブラッシュアップに務めた。<br/>また、設計等も自身で行うなど、開発に関わる全行程に関わる。<br/>主にチャット画面の実装を担当し、特にテキスト入力に関しては日常的な利用に関わる部分のため、Androidではあまり一般的でないUIを実現。",
+      tools: ['Android', 'Java']
+    },
+    {
+      timeAtHtml: "平成29年4月 〜",
+      name: "高校生向けプログラミング授業",
+      members: '1人',
+      contentHtml: '昨今のプログラミング教育への注目へ対応するため、高校生向けのプログラミング教育へ学校内で初めて取り組む。20人を越える生徒の多くがプログラミング未経験である中、年間を通しUnityによるゲーム開発で作品を出すことを目標とし、プログラミング的思考を育てる授業を独自に展開する。',
+      tools: ['Ruby', 'C#', 'Unity', 'Git']
+    },
+    {
+      timeAtHtml: '平成29年9月<br/> 〜 平成30年1月',
+      name: "地方自治体イベント向けSNS運用",
+      members: '1人',
+      contentHtml: '市が主催となるイベントに向けTwitterの運用を受託。',
+      tools: ['Twitter', 'Adobe Illustrator']
+    },
+    {
+      timeAtHtml: '平成29年12月',
+      name: "地方自治体イベント向け動画制作",
+      members: '1人',
+      contentHtml: '市が主催となるイベントに向け、Twitter上で公開する広報動画 (動画広告) の制作を受託。',
+      tools: ['After Effects', 'Premiere Pro', 'Adobe Illustrator']
+    },
+    {
+      timeAtHtml: '平成29年11月<br/> 〜 12月',
+      name: 'SNS管理アプリケーション開発',
+      members: '1人',
+      contentHtml: 'ソーシャルアカウントを管理・解析するWebアプリケーションの初期開発に参画。開発体制の内製化をしていない事業者であるため、UXを高められるモダンな設計でありながらも、基盤には十分に枯れた技術や大きなバックが存在するもの、設計が破綻しづらく生産性の高い技術選定を心掛けた。',
+      tools: ['TypeScript', 'React', 'NodeJS', 'Java', 'Kotlin', 'Swagger', 'PostgreSQL', 'JAX-RS (Jersey)']
+    }
+  ];
+
 doctype html
 html
   head
     meta(charset="UTF-8")
-    link(rel="stylesheet" href="./css/index.css")
+    link(rel="stylesheet" type="text/css" href="css/index.css")
+    link(rel='stylesheet' type="text/css" href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css')
   body
-    span= 'Hello, World!'
+    section.sheet
+      +primary_header() 履歴書
+
+      div 平成29年12月18日
+
+      +table()#personal-info
+        tbody
+          tr
+            th フリガナ
+            td(colspan="2") ヨシオカ シュウマ
+            td(rowspan="3")#primary-avatar
+              +img(src="https://gravatar.com/avatar/0a741f935003a289716373693b95db34?s=200&rating=g")
+          tr
+            th 氏名
+            td 吉岡 秀馬
+            td#imprint
+              // Imprint
+          tr
+            th 生年月日
+            td(colspan="2") 平成9年6月4日 (満20歳)
+          tr
+            th 現住所
+            td(colspan="3")
+              div
+                span= "〒"
+                // Zip
+              div
+                span= "東京都昭島市"
+                // Address
+          tr
+            th メールアドレス
+            td(colspan="3") s64.stdio@gmail.com
+
+      div#careers
+        +table()
+          tbody
+            each career in careers
+              tr
+                td= career.timeAt
+                td= career.type
+                td
+                  div.name= career.name
+                  if career.location || career.notes
+                    div.career-notes
+                      if career.location
+                        span.location= career.location
+                      if career.notes
+                        span.notes= career.notes
+        div.point= '※ "長期契約" として、契約期間が半年以上のもののみを記載'
+
+      section#projects
+        +primary_header() 参画プロジェクト (一例)
+        +table()
+          tbody
+            each project in projects
+              tr
+                td(rowspan='2')!= project.timeAtHtml
+                td= project.name
+                td
+                  if project.members
+                    span= '体制: '
+                    span= project.members
+              tr
+                td(colspan="2")
+                  div!= project.contentHtml
+                  if project.tools
+                    div.using-tools
+                      span= '使用技術: '
+                      span
+                        each tool in project.tools
+                          span.tool= tool

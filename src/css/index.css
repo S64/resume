@@ -1,5 +1,142 @@
 @import './_consts.css';
 
+@media screen {
+  .sheet {
+    padding: 10mm;
+    width: 210mm;
+    margin: 0 auto;
+  }
+}
+
+@page {
+  counter-increment: page;
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+  }
+}
+
 :root {
+  font-family: 'Noto Sans Japanese', sans-serif;
+
   font-size: 2.3mm;
+  line-height: 1.25em;
+
+  --text-align-start: {
+    text-align: left;
+  }
+  --text-align-end: {
+    text-align: right;
+  }
+
+  --imprint-box-size: 15mm;
+}
+
+h1 {
+  line-height: 1.5em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &,
+  & tr th,
+  & tr td {
+    border: solid 1px #000;
+  }
+
+  & tr th,
+  & tr td {
+    @apply --text-align-start;
+  }
+}
+
+#personal-info,
+#careers,
+#projects {
+  & {
+    margin: 10mm 0;
+    page-break-inside: avoid;
+  }
+
+  & tr th,
+  & tr td {
+    padding: 1.5mm 2mm;
+  }
+}
+
+#imprint {
+  padding: 0;
+  width: var(--imprint-box-size);
+  height: var(--imprint-box-size);
+}
+
+td#primary-avatar {
+  width: 2.5cm;
+  border: none;
+  padding: 2mm;
+  & .img {
+    display: block;
+    width: 100%;
+  }
+}
+
+table#personal-info {
+  & tr {
+    & > *:first-child {
+      width: 25mm;
+    }
+  }
+}
+
+#careers {
+  & table {
+    & tr {
+      & > *:nth-child(1) {
+        width: 35mm;
+      }
+      & > *:nth-child(2) {
+        width: 17.5mm;
+      }
+    }
+  }
+
+  & .name {
+    font-size: 1em;
+  }
+
+  & .career-notes {
+    & .location,
+    & .notes {
+      &:before {
+        content: ' ';
+      }
+    }
+
+    & .location {
+
+    }
+
+    & .notes {
+
+    }
+  }
+
+  & .point {
+    @apply --text-align-end;
+  }
+}
+
+#projects table {
+  & tr {
+    & > *:nth-child(1)[rowspan="2"] {
+      width: 25mm;
+    }
+  }
+  & .using-tools {
+    margin-top: 1em;
+    & *.tool {
+      margin-right: 1em;
+    }
+  }
 }
