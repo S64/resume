@@ -11,6 +11,7 @@
   },
   "homepage": "https://github.com/S64/resume#readme",
   "devDependencies": {
+    "@types/html-pdf": "^2.1.2",
     "html-pdf": "^2.2.0"
   }
 }
