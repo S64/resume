@@ -24,5 +24,9 @@
     "build:pdf": "ts-node scripts/pdf.ts",
     "build:html": "pug 'src/index.pug' --out 'dist/'",
     "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'"
+  },
+  "dependencies": {
+    "paper-css": "^0.3.0",
+    "sanitize.css": "^5.0.0"
   }
 }
