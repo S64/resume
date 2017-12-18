@@ -12,7 +12,8 @@ const html = fs.readFileSync(
 const options: pdf.CreateOptions = {
   format: 'A4',
   orientation: 'portrait',
-  type: 'pdf'
+  type: 'pdf',
+  border: '10mm',
 };
 
 pdf.create(html, options).toFile(
