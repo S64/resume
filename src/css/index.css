@@ -140,3 +140,8 @@ table#personal-info {
     }
   }
 }
+
+#footer {
+  margin-top: 2.5mm;
+  @apply --text-align-end;
+}
