@@ -9,5 +9,8 @@
   "bugs": {
     "url": "https://github.com/S64/resume/issues"
   },
-  "homepage": "https://github.com/S64/resume#readme"
+  "homepage": "https://github.com/S64/resume#readme",
+  "devDependencies": {
+    "html-pdf": "^2.2.0"
+  }
 }
