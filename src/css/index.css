@@ -87,6 +87,13 @@ table#personal-info {
       width: 25mm;
     }
   }
+  & tr#licenses {
+    & > *:last-child {
+      & span {
+        margin-right: 1em;
+      }
+    }
+  }
 }
 
 #careers {
