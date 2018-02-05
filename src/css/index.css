@@ -164,3 +164,10 @@ table#personal-info {
   margin-top: 2.5mm;
   @apply --text-align-end;
 }
+
+#self-promotion {
+  & .sp-block {
+    margin: 0;
+    padding: .6em 0;
+  }
+}
