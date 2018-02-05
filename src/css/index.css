@@ -21,6 +21,9 @@
   font-size: 2.5mm;
   line-height: 1.25em;
 
+  -webkit-font-feature-settings: "palt";
+  font-variant-ligatures: none;
+
   --text-align-start: {
     text-align: left;
   }
@@ -29,6 +32,14 @@
   }
 
   --imprint-box-size: 15mm;
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 h1 {
