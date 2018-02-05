@@ -8,15 +8,15 @@ include _includes/_mixins.pug
   const osses = [
     {
       url: 'https://github.com/S64/android-animated-toolbar',
-      stars: 33
+      stars: 35
     },
     {
       url: 'https://github.com/S64/android-outside-activity',
-      stars: 16
+      stars: 17
     },
     {
       url: 'https://github.com/S64/android-inset-views',
-      stars: 0
+      stars: 1
     },
     {
       url: 'https://github.com/S64/android-nested-scrolling-views',
@@ -28,11 +28,11 @@ include _includes/_mixins.pug
     },
     {
       url: 'https://github.com/S64/android-navigation-bar-view',
-      stars: 32
+      stars: 33
     },
     {
       url: 'https://github.com/S64/android-sticky-recycler',
-      stars: 34
+      stars: 37
     },
     {
       url: 'https://github.com/S64/repoli',
@@ -40,7 +40,11 @@ include _includes/_mixins.pug
     },
     {
       url: 'https://github.com/S64/moshi-kotlin-ignore',
-      stars: 1
+      stars: 3
+    },
+    {
+      url: 'https://github.com/S64/vue-universal-cookies',
+      stars: 4
     }
   ];
 
@@ -256,7 +260,7 @@ include _includes/_mixins.pug
       timeAtHtml: '平成29年8月',
       name: '各種OSS開発',
       contentHtml: 'Android向けライブラリを中心に、開発したコンポーネントをOSSとして継続的に公開している。現在、GitHub上で' + osses.map((oss) => oss.stars).reduce((sum, stars) => sum+stars) + 'を越えるStarを獲得。',
-      tools: ['Android', 'Java', 'Kotlin', 'TypeScript']
+      tools: ['Android', 'Java', 'Kotlin', 'TypeScript', 'Vue.js']
     }
   ];
 
