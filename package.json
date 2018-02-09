@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/html-pdf": "^2.1.2",
     "@types/pug": "^2.0.4",
+    "cpx": "^1.5.0",
     "html-pdf": "^2.2.0",
     "js-joda": "^1.6.2",
     "live-server": "^1.2.0",
@@ -25,10 +26,11 @@
     "typescript": "^2.6.2"
   },
   "scripts": {
-    "build": "npm run build:html && npm run build:css && npm run build:pdf",
+    "build": "npm run build:html && npm run build:css && npm run build:assets && npm run build:pdf",
     "build:pdf": "ts-node scripts/pdf.ts",
     "build:html": "ts-node scripts/html.ts",
     "build:css": "postcss 'src/css/index.css' --dir 'dist/css/' --config 'postcss.config.js'",
+    "build:assets": "cpx --verbose --update --include-empty-dirs 'src/assets/**' 'dist/assets'",
     "server": "live-server 'dist/'"
   }
 }

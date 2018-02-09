@@ -90,7 +90,7 @@ h1 {
 }
 
 td#primary-avatar {
-  width: 2.5cm;
+  width: 3cm;
   border: none;
   padding: 2mm;
   & .img {
