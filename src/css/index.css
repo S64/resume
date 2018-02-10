@@ -83,6 +83,10 @@ h1 {
   page-break-inside: avoid;
 }
 
+#personal-info {
+  margin-top: 5mm;
+}
+
 #imprint {
   padding: 0;
   width: var(--imprint-box-size);
